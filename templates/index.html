@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word & Character Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">PYTHON TEXT ANALYSIS</p>
+            <h1>Word & Character Counter</h1>
+            <p class="subtitle">
+                Enter a paragraph and instantly calculate characters, words,
+                sentences, and spaces.
+            </p>
+        </section>
+
+        <form method="POST" class="card">
+            <label for="text">Your paragraph</label>
+            <textarea id="text" name="text"
+                placeholder="Type or paste your paragraph here...">{{ text }}</textarea>
+
+            <div class="actions">
+                <button type="submit">Analyze Text</button>
+                <a class="secondary" href="/">Clear</a>
+            </div>
+        </form>
+
+        <section class="results">
+            <div class="stat-card">
+                <span>Characters</span>
+                <strong>{{ stats.characters }}</strong>
+            </div>
+            <div class="stat-card">
+                <span>Words</span>
+                <strong>{{ stats.words }}</strong>
+            </div>
+            <div class="stat-card">
+                <span>Sentences</span>
+                <strong>{{ stats.sentences }}</strong>
+            </div>
+            <div class="stat-card">
+                <span>Spaces</span>
+                <strong>{{ stats.spaces }}</strong>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>How it works</h2>
+            <ul>
+                <li><code>len(text)</code> counts all characters.</li>
+                <li><code>text.split()</code> is used for basic word counting.</li>
+                <li>Sentence endings are detected with <code>.</code>, <code>!</code>, and <code>?</code>.</li>
+                <li><code>text.count(" ")</code> counts ordinary space characters.</li>
+            </ul>
+        </section>
+
+        <footer>
+            Built with Python + Flask • Deployable on Render
+        </footer>
+    </main>
+</body>
+</html>

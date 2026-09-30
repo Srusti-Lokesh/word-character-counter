@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    color: #16233b;
+}
+
+.container {
+    width: min(960px, 92%);
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.05;
+}
+
+.subtitle {
+    max-width: 680px;
+    margin: 16px auto 0;
+    color: #5d6b82;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.card, .info {
+    background: #ffffff;
+    border: 1px solid #dfe7f4;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 12px 35px rgba(33, 62, 105, 0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 750;
+}
+
+textarea {
+    width: 100%;
+    min-height: 230px;
+    resize: vertical;
+    padding: 16px;
+    border: 1px solid #cbd6e7;
+    border-radius: 12px;
+    font: inherit;
+    line-height: 1.6;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #4f72ff;
+    box-shadow: 0 0 0 4px rgba(79, 114, 255, 0.12);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+button, .secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    border: 0;
+    background: #2146d0;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #cbd6e7;
+    color: #263650;
+    background: #fff;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #dfe7f4;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.stat-card span {
+    display: block;
+    color: #6c7890;
+    font-size: 14px;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 7px;
+    font-size: 32px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info li {
+    margin: 9px 0;
+    color: #53627a;
+}
+
+code {
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: #eef2f9;
+}
+
+footer {
+    text-align: center;
+    color: #738099;
+    margin-top: 28px;
+    font-size: 13px;
+}
+
+@media (max-width: 720px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        padding: 28px 0;
+    }
+
+    .results {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}

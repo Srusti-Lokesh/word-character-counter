@@ -1,0 +1,1 @@
+Python is a beginner-friendly programming language. It is widely used for web development, automation, data analysis, and education! This small project demonstrates how strings can be processed with simple Python operations.
